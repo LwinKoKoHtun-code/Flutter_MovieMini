@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:movie_db/constant/api_constant.dart';
+import 'package:movie_db/data/vos/genres_vo/genres_vo.dart';
 import 'package:movie_db/data/vos/movie_vo/movie_vo.dart';
 import 'package:movie_db/network/data_agent/movie_data_agent.dart';
 
@@ -22,4 +23,11 @@ class MovieDataAgentImpl extends MovieDataAgent {
       .asStream()
       .map((event) => event.results)
       .first;
+
+  //@override
+//  Future<List<GenresVO>?> getGenres(int page) => _api
+//       .getGenresMovies(kApiKey, page)
+//       .asStream()
+//       .map((event) => event.results)
+//       .first;
 }

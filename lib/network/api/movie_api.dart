@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:movie_db/network/response/genres_response/genres_response.dart';
 import 'package:retrofit/http.dart';
 
 import '../../constant/api_constant.dart';
@@ -15,4 +16,8 @@ abstract class MovieAPI {
     @Query(kQueryParamsAPIKey) String apiKey,
     @Query(kQueryParamsPage) int page,
   );
+
+  @GET(kGetGenresEndPoint)
+  Future<GenresResponse> getGenresMovies(
+      @Query(kQueryParamsAPIKey) String apiKey);
 }

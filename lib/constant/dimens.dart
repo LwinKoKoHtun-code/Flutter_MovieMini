@@ -1,1 +1,1 @@
-const double kBannerSizeBoxHeight = 300.0;
+const double kBannerSizeBoxHeight = 200.0;
